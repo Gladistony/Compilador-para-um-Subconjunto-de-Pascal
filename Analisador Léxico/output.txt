@@ -1,0 +1,74 @@
+TIPO DO TOKEN          | LEXEMA          | POSICAO
+------------------------------------------------------------
+KEYWORD (program)      | program         | Linha: 1
+ID                     | exemplo         | Linha: 1
+DELIMITER              | ;               | Linha: 1
+KEYWORD (var)          | var             | Linha: 3
+ID                     | x               | Linha: 4
+DELIMITER              | ,               | Linha: 4
+ID                     | y               | Linha: 4
+DELIMITER              | :               | Linha: 4
+KEYWORD (integer)      | integer         | Linha: 4
+DELIMITER              | ;               | Linha: 4
+ID                     | z               | Linha: 5
+DELIMITER              | :               | Linha: 5
+KEYWORD (real)         | real            | Linha: 5
+DELIMITER              | ;               | Linha: 5
+KEYWORD (procedure)    | procedure       | Linha: 7
+ID                     | teste           | Linha: 7
+DELIMITER              | ;               | Linha: 7
+KEYWORD (var)          | var             | Linha: 8
+ID                     | a               | Linha: 9
+DELIMITER              | :               | Linha: 9
+KEYWORD (integer)      | integer         | Linha: 9
+DELIMITER              | ;               | Linha: 9
+KEYWORD (begin)        | begin           | Linha: 10
+ID                     | a               | Linha: 11
+ASSIGNOP               | :=              | Linha: 11
+NUM                    | 10              | Linha: 11
+DELIMITER              | ;               | Linha: 11
+KEYWORD (if)           | if              | Linha: 12
+ID                     | a               | Linha: 12
+RELOP                  | >               | Linha: 12
+NUM                    | 5               | Linha: 12
+KEYWORD (then)         | then            | Linha: 12
+ID                     | x               | Linha: 13
+ASSIGNOP               | :=              | Linha: 13
+ID                     | a               | Linha: 13
+KEYWORD (else)         | else            | Linha: 14
+ID                     | x               | Linha: 15
+ASSIGNOP               | :=              | Linha: 15
+NUM                    | 0               | Linha: 15
+KEYWORD (end)          | end             | Linha: 16
+DELIMITER              | ;               | Linha: 16
+KEYWORD (begin)        | begin           | Linha: 18
+ID                     | x               | Linha: 19
+ASSIGNOP               | :=              | Linha: 19
+NUM                    | 1               | Linha: 19
+DELIMITER              | ;               | Linha: 19
+ID                     | y               | Linha: 20
+ASSIGNOP               | :=              | Linha: 20
+NUM                    | 2               | Linha: 20
+DELIMITER              | ;               | Linha: 20
+ID                     | z               | Linha: 21
+ASSIGNOP               | :=              | Linha: 21
+NUM                    | 3.5             | Linha: 21
+DELIMITER              | ;               | Linha: 21
+ID                     | teste           | Linha: 23
+DELIMITER              | (               | Linha: 23
+DELIMITER              | )               | Linha: 23
+DELIMITER              | ;               | Linha: 23
+KEYWORD (while)        | while           | Linha: 25
+ID                     | x               | Linha: 25
+RELOP                  | <               | Linha: 25
+ID                     | y               | Linha: 25
+KEYWORD (do)           | do              | Linha: 25
+KEYWORD (begin)        | begin           | Linha: 26
+ID                     | x               | Linha: 27
+ASSIGNOP               | :=              | Linha: 27
+ID                     | x               | Linha: 27
+ADDOP                  | +               | Linha: 27
+NUM                    | 1               | Linha: 27
+KEYWORD (end)          | end             | Linha: 28
+KEYWORD (end)          | end             | Linha: 29
+DELIMITER              | .               | Linha: 29
