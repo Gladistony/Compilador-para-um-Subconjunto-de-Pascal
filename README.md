@@ -1,4 +1,3 @@
-````markdown
 # Compilador para um Subconjunto de Pascal
 
 Este repositório contém a implementação de parte de um compilador para um subconjunto do Turbo Pascal, sem suporte a arrays e registros (por simplificação).
@@ -154,5 +153,3 @@ Observações técnicas:
 
 - O token de módulo é implementado como um token literal retornado pelo scanner quando encontra a palavra "gladistony" (caso-insensitivo).
 - O analisador imprime o valor de cada expressão seguida de nova linha.
-
-````
