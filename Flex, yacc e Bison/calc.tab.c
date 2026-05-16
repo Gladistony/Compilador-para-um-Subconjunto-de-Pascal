@@ -75,12 +75,11 @@
 
 using namespace std;
 
-// Protótipos das funções obrigatórias
 int yylex();
 int yyparse();
 void yyerror(const char *s);
 
-#line 84 "calc.tab.c"
+#line 83 "calc.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -510,8 +509,8 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    31,    31,    32,    33,    37,    38,    39,    40,    41,
-      42,    43,    44
+       0,    29,    29,    30,    31,    35,    36,    37,    38,    39,
+      40,    41,    42
 };
 #endif
 
@@ -1083,73 +1082,73 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* calc: calc expr '\n'  */
-#line 31 "calc.y"
+#line 29 "calc.y"
                          { cout << yyvsp[-1] << endl; }
-#line 1089 "calc.tab.c"
+#line 1088 "calc.tab.c"
     break;
 
   case 3: /* calc: calc '\n'  */
-#line 32 "calc.y"
-                         { /* Permite linhas em branco sem dar erro */ }
-#line 1095 "calc.tab.c"
+#line 30 "calc.y"
+                         { /* Linhas em branco */ }
+#line 1094 "calc.tab.c"
     break;
 
   case 4: /* calc: %empty  */
-#line 33 "calc.y"
+#line 31 "calc.y"
                          { /* Condição de parada / epsilon */ }
-#line 1101 "calc.tab.c"
+#line 1100 "calc.tab.c"
     break;
 
   case 5: /* expr: expr '+' expr  */
-#line 37 "calc.y"
-                         { yyval = yyvsp[-2] + yyvsp[0]; }
-#line 1107 "calc.tab.c"
+#line 35 "calc.y"
+                            { yyval = yyvsp[-2] + yyvsp[0]; }
+#line 1106 "calc.tab.c"
     break;
 
   case 6: /* expr: expr '-' expr  */
-#line 38 "calc.y"
-                         { yyval = yyvsp[-2] - yyvsp[0]; }
-#line 1113 "calc.tab.c"
+#line 36 "calc.y"
+                            { yyval = yyvsp[-2] - yyvsp[0]; }
+#line 1112 "calc.tab.c"
     break;
 
   case 7: /* expr: expr '*' expr  */
-#line 39 "calc.y"
-                         { yyval = yyvsp[-2] * yyvsp[0]; }
-#line 1119 "calc.tab.c"
+#line 37 "calc.y"
+                            { yyval = yyvsp[-2] * yyvsp[0]; }
+#line 1118 "calc.tab.c"
     break;
 
   case 8: /* expr: expr '/' expr  */
-#line 40 "calc.y"
-                         { yyval = yyvsp[-2] / yyvsp[0]; }
-#line 1125 "calc.tab.c"
+#line 38 "calc.y"
+                            { yyval = yyvsp[-2] / yyvsp[0]; }
+#line 1124 "calc.tab.c"
     break;
 
   case 9: /* expr: expr GLADISTONY expr  */
-#line 41 "calc.y"
-                         { yyval = fmod(yyvsp[-2], yyvsp[0]); }
-#line 1131 "calc.tab.c"
+#line 39 "calc.y"
+                            { yyval = fmod(yyvsp[-2], yyvsp[0]); }
+#line 1130 "calc.tab.c"
     break;
 
   case 10: /* expr: '-' expr  */
-#line 42 "calc.y"
-                         { yyval = -yyvsp[0]; }
-#line 1137 "calc.tab.c"
+#line 40 "calc.y"
+                            { yyval = -yyvsp[0]; }
+#line 1136 "calc.tab.c"
     break;
 
   case 11: /* expr: '(' expr ')'  */
-#line 43 "calc.y"
-                         { yyval = yyvsp[-1]; }
-#line 1143 "calc.tab.c"
+#line 41 "calc.y"
+                            { yyval = yyvsp[-1]; }
+#line 1142 "calc.tab.c"
     break;
 
   case 12: /* expr: NUMBER  */
-#line 44 "calc.y"
-                         { yyval = yyvsp[0]; }
-#line 1149 "calc.tab.c"
+#line 42 "calc.y"
+                            { yyval = yyvsp[0]; }
+#line 1148 "calc.tab.c"
     break;
 
 
-#line 1153 "calc.tab.c"
+#line 1152 "calc.tab.c"
 
       default: break;
     }
@@ -1342,17 +1341,13 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 47 "calc.y"
+#line 45 "calc.y"
 
 
-/* Rotinas de Suporte */
-
-// Função chamada pelo Bison quando ocorre um erro de sintaxe
 void yyerror(const char *s) {
     cout << "Erro: " << s << endl;
 }
 
-// Função principal que dá o pontapé inicial na análise
 int main() {
     yyparse();
     return 0;

@@ -378,14 +378,14 @@ static const YY_CHAR yy_ec[256] =
         1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    4,    1,    5,    5,    5,
         5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    6,    1,    1,    7,
+        1,    1,    1,    1,    6,    1,    1,    7,    1,    1,
+        8,    1,    9,    1,    1,   10,    1,   11,   12,    1,
+        1,    1,   13,   14,    1,    1,    1,    1,   15,    1,
+        1,    1,    1,    1,    1,    1,   16,    1,    1,   17,
 
-        1,    1,    8,    1,    9,    1,    1,   10,    1,   11,
-       12,    1,    1,    1,   13,   14,    1,    1,    1,    1,
-       15,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,   18,    1,   19,    1,    1,   20,    1,   21,
+       22,    1,    1,    1,   23,   24,    1,    1,    1,    1,
+       25,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -402,17 +402,18 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[16] =
+static const YY_CHAR yy_meta[26] =
     {   0,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1
     } ;
 
 static const flex_int16_t yy_base[23] =
     {   0,
-        0,    7,   29,   30,   26,    2,   17,   24,   20,    6,
-       18,   18,   15,   12,    7,    5,    6,    6,    1,   30,
-       30,    0
+        0,   17,   34,   41,   31,    2,    0,   30,   10,    7,
+        7,    4,    7,    7,    4,    7,   16,   18,   15,   41,
+       41,    0
     } ;
 
 static const flex_int16_t yy_def[23] =
@@ -422,22 +423,26 @@ static const flex_int16_t yy_def[23] =
         0,   21
     } ;
 
-static const flex_int16_t yy_nxt[46] =
+static const flex_int16_t yy_nxt[67] =
     {   0,
-        4,    5,   21,   21,    6,    9,   10,    7,    5,    9,
-       10,    6,   21,   21,    7,   20,   19,   18,   17,   16,
-       15,   14,   12,   13,   12,    8,   11,    8,   21,    3,
+        4,    5,   21,   21,    6,    9,   10,    7,   12,   11,
+        9,   10,   13,   14,   12,   15,   16,    7,    5,   11,
+       17,    6,   13,   14,    7,   15,   16,   18,   19,   20,
+       17,    8,    8,   21,    7,   21,   21,   18,   19,   20,
+        3,   21,   21,   21,   21,   21,   21,   21,   21,   21,
        21,   21,   21,   21,   21,   21,   21,   21,   21,   21,
-       21,   21,   21,   21,   21
+       21,   21,   21,   21,   21,   21
     } ;
 
-static const flex_int16_t yy_chk[46] =
+static const flex_int16_t yy_chk[67] =
     {   0,
-       22,    1,    0,    0,    1,    6,    6,    1,    2,   10,
-       10,    2,    0,    0,    2,   19,   18,   17,   16,   15,
-       14,   13,   12,   11,    9,    8,    7,    5,    3,   21,
+       22,    1,    0,    0,    1,    6,    6,    1,   12,    7,
+       10,   10,   11,   13,    9,   14,   15,    1,    2,    7,
+       16,    2,   11,   13,    2,   14,   15,   17,   18,   19,
+       16,    8,    5,    3,    2,    0,    0,   17,   18,   19,
        21,   21,   21,   21,   21,   21,   21,   21,   21,   21,
-       21,   21,   21,   21,   21
+       21,   21,   21,   21,   21,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -458,11 +463,10 @@ char *yytext;
 #line 2 "calc.l"
 #include <iostream>
 #include <cstdlib>
-#include "calc.tab.h" // Arquivo de cabeçalho gerado automaticamente pelo Bison
+#include "calc.tab.h" 
 using namespace std;
-#line 464 "lex.yy.c"
-/* Ignora a necessidade da função yywrap */
-#line 466 "lex.yy.c"
+#line 469 "lex.yy.c"
+#line 470 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -682,7 +686,7 @@ YY_DECL
 #line 11 "calc.l"
 
 
-#line 686 "lex.yy.c"
+#line 690 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -715,7 +719,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 30 );
+		while ( yy_base[yy_current_state] != 41 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -753,8 +757,8 @@ case 3:
 YY_RULE_SETUP
 #line 15 "calc.l"
 { 
-                          yylval = atof(yytext); // Converte o texto lido para double
-                          return NUMBER;         // Retorna o token NUMBER
+                          yylval = atof(yytext); 
+                          return NUMBER;         
                         }
 	YY_BREAK
 case 4:
@@ -762,7 +766,7 @@ case 4:
 YY_RULE_SETUP
 #line 19 "calc.l"
 { 
-                          return yytext[0];      // Retorna o próprio caractere (como '+', '-', '\n', etc)
+                          return yytext[0];     
                         }
 	YY_BREAK
 case 5:
@@ -770,7 +774,7 @@ YY_RULE_SETUP
 #line 23 "calc.l"
 ECHO;
 	YY_BREAK
-#line 774 "lex.yy.c"
+#line 778 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
