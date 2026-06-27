@@ -1,4 +1,3 @@
-````markdown
 # Compilador para um Subconjunto de Pascal
 
 Este repositório contém a implementação de parte de um compilador para um subconjunto do Turbo Pascal, sem suporte a arrays e registros (por simplificação).
@@ -155,4 +154,61 @@ Observações técnicas:
 - O token de módulo é implementado como um token literal retornado pelo scanner quando encontra a palavra "gladistony" (caso-insensitivo).
 - O analisador imprime o valor de cada expressão seguida de nova linha.
 
-````
+## Atividade 03 - Projeto parte 2
+
+Esta etapa do projeto implementa a Análise Semântica do subconjunto de Pascal, utilizando uma Tabela de Símbolos (Symbol Table) para garantir a consistência das regras de negócio da linguagem.
+
+O que foi implementado:
+- Tabela de Símbolos (symtable.h / symtable.cpp): Estrutura baseada em hash map para armazenamento eficiente e busca de identificadores.
+
+- Verificação de Declaração: O compilador agora detecta automaticamente dupla declaração de variáveis no mesmo escopo.
+
+- Detecção de Variáveis Não Declaradas: Identificação de uso de identificadores que não foram previamente definidos na seção var.
+
+- Checagem de Tipos (Type Checking):
+
+    - Verificação de compatibilidade em atribuições (:=).
+
+    - Propagação de tipos em expressões aritméticas (ex: Integer + Real = Real).
+
+    - Prevenção de atribuição de valores Real para variáveis do tipo Integer.
+
+Passos para compilar e rodar (Linux):
+
+```bash
+cd Analisador\ Semântico/
+bison -d parser.y
+flex lexer.l
+g++ parser.tab.c lex.yy.c symtable.cpp -o compilador
+./compilador < testes/test1.pas 
+```
+
+Foram feitos 4 arquivos de teste, para usalos basta mudar o nome test1.pas para test2.pas ...
+
+Os resultados esperados são:
+
+test1.pas
+```bash
+>>> Analise sintatica e semantica concluida com sucesso! <<<
+```
+test2.pas
+```bash
+Erro Semantico (Linha 5): Variavel 'x' ja declarada neste escopo!
+Erro Semantico (Linha 11): Variavel 'z' nao foi declarada!
+Erro Semantico (Linha 13): Atribuicao invalida! Nao e possivel atribuir REAL a variavel INTEGER 'x'.
+
+>>> Analise sintatica e semantica concluida com sucesso! <<<
+```
+test3.pas
+```bash
+Erro Semantico (Linha 6): Variavel 'a' ja declarada neste escopo!
+Erro Semantico (Linha 19): Atribuicao invalida! Nao e possivel atribuir REAL a variavel INTEGER 'c'.
+Erro Semantico (Linha 22): Variavel 'w' nao foi declarada!
+Erro Semantico (Linha 25): Variavel 'k' nao foi declarada!
+
+>>> Analise sintatica e semantica concluida com sucesso! <<<
+```
+test4.pas
+```bash
+>>> Analise sintatica e semantica concluida com sucesso! <<<
+```
