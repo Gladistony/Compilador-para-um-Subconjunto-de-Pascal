@@ -44,8 +44,6 @@ NUM        {DIGITS}(\.{DIGITS})?([Ee][+-]?{DIGITS})?
 ";"|"."|":"|","|"("|")"     { return yytext[0]; /* Retorna o próprio caractere como token */ }
 
 {ID}                        { 
-                              // O strdup copia a string para a memória. 
-                              // O Bison vai receber este nome através do yylval.str
                               yylval.str = strdup(yytext); 
                               return T_ID; 
                             }

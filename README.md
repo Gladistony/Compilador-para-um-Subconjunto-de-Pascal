@@ -173,7 +173,7 @@ O que foi implementado:
 
     - Prevenção de atribuição de valores Real para variáveis do tipo Integer.
 
-Passos para compilar e rodar (Linux):
+Para compilar e rodar no Linux:
 
 ```bash
 cd Analisador\ Semântico/
@@ -181,6 +181,22 @@ bison -d parser.y
 flex lexer.l
 g++ parser.tab.c lex.yy.c symtable.cpp -o compilador
 ./compilador < testes/test1.pas 
+```
+
+Para compilar e rodar no Windows:
+
+```bash
+cd Analisador\ Semântico/
+bison -d parser.y
+flex lexer.l
+g++ parser.tab.c lex.yy.c symtable.cpp -o compilador
+Get-Content .\testes\test1.pas | .\compilador.exe
+```
+Caso já tenha executado os quatro primeiro passos, é possível também executar o último passo em um CMD (powershell) com o seguinte comando:
+
+```bash
+cd Analisador\ Semântico/
+compilador.exe < testes\test1.pas
 ```
 
 Foram feitos 4 arquivos de teste, para usalos basta mudar o nome test1.pas para test2.pas ...
